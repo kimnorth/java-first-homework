@@ -24,6 +24,12 @@ class Storage {
     }
   }
 
+  public boolean isFull() {
+
+    return countStorage() == archives.length;
+
+  }
+
   // public void removeExhibitFromStorage() {
   //   for (Exhibits exhibit : archives) {
 

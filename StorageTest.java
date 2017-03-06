@@ -23,6 +23,12 @@ public class StorageTest {
     assertEquals( 1, storage.countStorage());
   }
 
+  @Test
+  public void isStorageFull() {
+    storage.addExhibit(exhibit);
+    assertEquals( true, storage.isFull() );
+  }
+
   // @Test
   // public void removeExhibitFromStorage(){
 
