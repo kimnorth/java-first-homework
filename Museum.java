@@ -5,12 +5,14 @@ class Museum {
 
   public Museum(String museum_name) {
     this.name = museum_name;
-    this.collection = new Exhibits[10];
+    this.collection = new Exhibits[2];
   }
 
   public String getName(){
     return this.name;
   }
+
+  // Count
 
   public int countExhibits() {
     int count = 0;
@@ -20,6 +22,22 @@ class Museum {
       }
     }
     return count; 
+  }
+
+  // Add
+
+  public void addExhibit(Exhibits new_exhibit) {
+
+      if (isFull()){
+        return;
+      }
+
+      int index = this.countExhibits();
+      collection[index] = new_exhibit; 
+  }
+
+  public boolean isFull() {
+    return countExhibits() == collection.length;
   }
 
 }
