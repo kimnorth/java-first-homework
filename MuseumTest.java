@@ -14,6 +14,11 @@ public class MuseumTest {
   public void getBackName() {
     assertEquals( "Natural History Museum", museum.getName() );   
   }
+
+  @Test
+  public void countExhibits() {
+    assertEquals( 0, museum.countExhibits() );
+  }
   
 
 }
