@@ -5,11 +5,13 @@ public class MuseumTest {
 
   Museum museum;
   Exhibits exhibit;
+  Storage storage;
 
   @Before
   public void before() {
     museum = new Museum("Natural History Museum");
     exhibit = new Exhibits();  
+    storage = new Storage();
   }
 
   @Test
@@ -34,4 +36,10 @@ public class MuseumTest {
     museum.addExhibit(exhibit);
     assertEquals( true, museum.isFull() );
   }
+
+  // @Test
+  // public void transferToCollection() {
+  //   museum.moveFromStorage(storage)
+  //   assertEquals( 1, museum.countExhibits() )
+  // }
 }

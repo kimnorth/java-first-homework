@@ -3,8 +3,8 @@ class Museum {
   private String name;
   private Exhibits[] collection;
 
-  public Museum(String museum_name) {
-    this.name = museum_name;
+  public Museum(String museumName) {
+    this.name = museumName;
     this.collection = new Exhibits[2];
   }
 
@@ -39,5 +39,9 @@ class Museum {
   public boolean isFull() {
     return countExhibits() == collection.length;
   }
+
+  // public void moveFromStorage(Storage storage){
+
+  // }
 
 }
