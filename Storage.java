@@ -18,6 +18,10 @@ class Storage {
 
   public void addExhibit(Exhibits new_exhibit) {
 
+    if (isFull()) {
+      return;
+    }
+
     for (Exhibits exhibit : archives) {
       int index = this.countStorage();
       archives[index] = new_exhibit;
@@ -25,17 +29,17 @@ class Storage {
   }
 
   public boolean isFull() {
-
     return countStorage() == archives.length;
-
   }
 
-  // public void removeExhibitFromStorage() {
-  //   for (Exhibits exhibit : archives) {
+  public void removeExhibit() {
+    
+    for (Exhibits exhibit : archives) {
+      
+      int index = this.countStorage();
+      archives[index - 1] = null;      
 
-  //   }
-  // }
+    }
+  }
 
 }
-
-// try hard-coding the number of exhibits then working way back

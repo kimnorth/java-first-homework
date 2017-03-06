@@ -29,9 +29,10 @@ public class StorageTest {
     assertEquals( true, storage.isFull() );
   }
 
-  // @Test
-  // public void removeExhibitFromStorage(){
-
-  //   assertEquals(0, storage.countStorage() )
-  // }
+  @Test
+  public void removeExhibitFromStorage(){
+    storage.addExhibit(exhibit);
+    storage.removeExhibit();
+    assertEquals(0, storage.countStorage() );
+  }
 }
