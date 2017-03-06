@@ -35,4 +35,5 @@ public class StorageTest {
     storage.removeExhibit();
     assertEquals(0, storage.countStorage() );
   }
+
 }

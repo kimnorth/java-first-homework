@@ -40,8 +40,9 @@ class Museum {
     return countExhibits() == collection.length;
   }
 
-  // public void moveFromStorage(Storage storage){
-
-  // }
+  public void moveFromStorage(Storage storage, Exhibits exhibit) {
+    storage.removeExhibit();
+    this.addExhibit(exhibit);
+  }
 
 }

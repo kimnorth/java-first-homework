@@ -37,9 +37,11 @@ public class MuseumTest {
     assertEquals( true, museum.isFull() );
   }
 
-  // @Test
-  // public void transferToCollection() {
-  //   museum.moveFromStorage(storage)
-  //   assertEquals( 1, museum.countExhibits() )
-  // }
+  @Test
+  public void transferToCollection() {
+    storage.addExhibit(exhibit);
+    museum.moveFromStorage(storage, exhibit);
+    // System.out.println(storage.archives);
+    assertEquals( 1, museum.countExhibits() );
+  }
 }
