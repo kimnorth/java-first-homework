@@ -4,10 +4,12 @@ import org.junit.*;
 public class StorageTest {
 
   Storage storage;
+  Exhibits exhibit;
 
   @Before
   public void before() {  
     storage = new Storage();
+    exhibit = new Exhibits();
   }
 
   @Test
@@ -17,7 +19,8 @@ public class StorageTest {
 
   @Test
   public void addExhibitToStorage() {
-    assertEquals( 1, storage.countStorage())
+    storage.addExhibit(exhibit);
+    assertEquals( 1, storage.countStorage());
   }
 
   // @Test

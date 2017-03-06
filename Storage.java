@@ -2,7 +2,7 @@ class Storage {
 
   private Exhibits[] archives;
 
-  public Storage(){
+  public Storage() {
     this.archives = new Exhibits[1];
   }
 
@@ -14,6 +14,14 @@ class Storage {
       }
     }
     return count;
+  }
+
+  public void addExhibit(Exhibits new_exhibit) {
+
+    for (Exhibits exhibit : archives) {
+      int index = this.countStorage();
+      archives[index] = new_exhibit;
+    }
   }
 
   // public void removeExhibitFromStorage() {
